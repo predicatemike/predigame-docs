@@ -6,9 +6,9 @@
 ## Overview
 Predigame is an instructional platform that teaches the basics of coding through the creation of arcade games.
 The platform was researched and developed by [Predicate Academy](http://predicate.us) and used for teaching kids ages 8-17 all the *amazingly cool things* that can be created with code. Predigame is a minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface allowing aspiring coders to familarize themselves with *computational thinking* while
-downplaying many of the nuances that come with giving instructions to a computer. Holding true to form, Predigame seeks to provide a coding experience through the lens of a technologist - specific emphasis is given towards software design, utilization of real coding languages, command line execution, error debugging - skills that are *directly transferrable* in any journey to becoming a software engineer.
+downplaying many of the nuances that come with giving instructions to a computer. Holding true to form, Predigame seeks to offer a coding experience through the lens of a technologist - specific emphasis is given towards software design, modern programming languages, command line execution, error debugging - skills that are *directly transferrable* in any journey to becoming a software engineer.
 
-Unlike other introductory platforms that teach coding concepts through visual (drag and drop) interactions, Predigame is written in Python and Pygame. While the core gaming platform covers a number of common use cases, Predigame is completely extensible and games can be amplified through the use of custom code.
+Unlike other introductory platforms that teach coding concepts through visual (drag and drop) interactions, Predigame is written in Python and Pygame. While the core gaming platform covers a number of common use cases, Predigame is completely extensible and games can be amplified with custom code.
 
 Predigame requires minimum computing resources and has been tested on Microsoft Windows 10, macOS 10.12+ (Sierra and High Sierra), and Raspberry Pi Model 2B/3B (Raspbian Jessie and Stretch). It may likely run in on other operating systems, we just haven't tested them (yet).
 
@@ -29,6 +29,10 @@ Click Ninja was inspired by the app [fruit ninja](https://fruitninja.com/), but 
 
 ## Installing Predigame
 
+### Install a Text Editor
+
+Every coder needs a good text editor. For python development, we recommend using [Atom](https://atom.io). New to Atom? Check out their [documentation](https://flight-manual.atom.io/getting-started/sections/atom-basics/). Sorry Pi Users - Atom isn't currently available for Raspbian, so we'd recommend using IDLE or Thonny (both come preinstalled with Raspbian Stretch).
+
 ### Microsoft Windows 10
 
 *NOTE: installation will require Administrator permissions*
@@ -38,10 +42,6 @@ Click Ninja was inspired by the app [fruit ninja](https://fruitninja.com/), but 
 Predigame has been tested with Python v3.6.4 ([direct download link](https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe)). When installing, you'll want to make sure to check the box to have Python added to your PATH (it's off by default).
 
 ![Windows Screenshot](img/win_setup.png)
-
-**Install Atom**
-
-Every coder needs a good text editor. For python development, we recommend using [Atom](https://atom.io). New to Atom? Check out their [documentation](https://flight-manual.atom.io/getting-started/sections/atom-basics/).
 
 **Install Pygame**
 
@@ -76,11 +76,6 @@ This can take a minute or two to complete. Look for the line `Successfully insta
 **Install Python**
 
 Predigame has been tested with Python v3.6.4 ([direct download link](https://www.python.org/ftp/python/3.6.4/python-3.6.4-macosx10.6.pkg)).
-
-**Install Atom**
-
-Every coder needs a good text editor. For python development, we recommend using [Atom](https://atom.io). New to Atom? Check out their [documentation](https://flight-manual.atom.io/getting-started/sections/atom-basics/).
-
 
 **Install Pygame**
 
@@ -123,7 +118,7 @@ python -m pip uninstall predigame
 python -m pip install predigame
 ```
 
-We're not sure `pip install -U` will pull works correctly on Windows, so it's always good to uninstall first.
+We're not sure `pip install -U`  works correctly on Windows, so it's always good to uninstall first.
 
 ### macOS and Raspberry Pi
 
@@ -194,13 +189,17 @@ Save your changes. Then in the terminal, you'll want to run:
 pred game.py
 ```
 
-Did you see the background picture? Make sure you `cd hello` prior to running pred as you need to be in the same directory as your python files.
+Did you see the background picture? Make sure you `cd hello` prior to running `pred` as you need to be in the same directory as your python files.
 
 There you go! First "game" down. Take a look at the [Picture Frame](examples/pictureframe.md) example for some other cool coding additions.
+
+## API Docs
+
+Predigame API documentation can be found here: [http://predigame.io/api](http://predigame.io/api/predigame.html). Not sure what this means? Don't worry. We'll cover this later!
 
 
 ## Support
 Find a bug? Have a question?
 
 - Visit our Support Forum: [https://groups.google.com/a/predicate.us/forum/#!forum/supportloc](https://groups.google.com/a/predicate.us/forum/#!forum/support)
-- GitHub User? Fork our repos - [https://github.com/predigame](https://github.com/predigame). We take pull requests :)
+- GitHub User? Fork our repos - [https://github.com/predigame](https://github.com/predigame). We happily take pull requests :)

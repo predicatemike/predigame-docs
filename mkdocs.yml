@@ -12,7 +12,7 @@ edit_uri: ""
 pages:
    - Home: index.md
    - About: about.md
-   - Game Examples:
+   - Examples:
        - Drawing Sprites: examples/sprites.md
        - Actor Framework: examples/actors.md
        - Levels: examples/levels.md
@@ -20,6 +20,7 @@ pages:
        - Scoring: examples/score.md
        - Fireworks!: examples/fireworks.md
        - Picture Frame: examples/pictureframe.md
+       - Making Bacon: examples/bacon.md
        - Click Ninja: examples/clickninja.md
        - Thirsty Zombie: examples/thirsty.md
        - Zombie Madness: examples/zombie.md

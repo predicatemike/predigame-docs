@@ -1,7 +1,26 @@
-Making Bacon
-============
+# Making Bacon
 
-Here's a simple maze game that demonstrates some cool things we can do with actors. Create a new file named `bacon.py` and start with our standard first three lines of code:
+A simple maze game that demonstrates some cool things we can do with actors. Create a new file named `bacon.py` and start with our standard first three lines of code:
+
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete this tutorial. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Download Existing Game (Optional)
+We have a version of this game already done and ready to go. Just run the following command:
+
+```
+pred pull bacon
+```
+
+Then read the rest of the tutorial and follow along.
+
+## Getting Started
+To get things started, we're going to create a new Predigame game. This can be done by typing the following the command in the terminal:
+
+```
+pred new bacon
+```
+Now in the text editor, find and open the file `bacon/game.py`. Fix up your code so it looks like the example below:
 
 ```python
 WIDTH = 30
@@ -77,7 +96,7 @@ If this works, try adding some piggies. Here is one case where the `PIGGIES` con
 def create_piggy(num):
     for x in range(num):
         pos = rand_pos()
-        piggy = actor('Piggle', pos, tag='piggy')
+        piggy = actor('Porter', pos, tag='piggy')
         piggy.move_to((pos))
         # graze is a random walk
         piggy.wander(partial(graze, piggy), time=0.75)
@@ -85,7 +104,7 @@ def create_piggy(num):
 # create some piggies
 create_piggy(PIGGIES)
 ```
-`Piggle` is an animated actor. There is a special callback function `wander` that allows the computer to control the movement of an actor. The `wander` is called for every movement, in the case of our piggy, calls the Predigame internal `graze` callback function which is a random and undirected movement.  
+`Porter` is an animated actor. There is a special callback function `wander` that allows the computer to control the movement of an actor. The `wander` is called for every movement, in the case of our piggy, calls the Predigame internal `graze` callback function which is a random and undirected movement.  
 
 Try running saving these updates and running the game. We'll see the maze, our player, and now some piggies! It's possible to speed up the piggies by adjusting the `time` attribute for the random walk.
 
@@ -103,8 +122,8 @@ def shoot():
 
     # if it's a piggy and that piggy is alive
     if target and target.tag == 'piggy' and target.health > 0:
-        # kill the piggy
-        target.kill()
+        # kill the piggy and make it disappear in 3 seconds
+        target.kill(delay=3)
         # tally the kill
         score(1)
 

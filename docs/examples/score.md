@@ -1,15 +1,25 @@
-Keeping Score
-===========
+# Keeping Score
+
 Every game needs a way to keep score. This examples showcases a few of the current scoring options that are included in Predigame. While it's always possible to write your own scoring code, we've found these options cover many common use cases.
 
-To get started, let's create a file `score.py`. For the code, we'll start by defining our screen dimensions (30 x 20 grid cells) and provide a title.
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete this tutorial. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Getting Started
+To get things started, we're going to create a new Predigame game. This can be done by typing the following the command in the terminal:
+
+```
+pred new score
+```
+Now in the text editor, find and open the file `score/game.py`. This file is used to create a basic Predigame canvas that we'll use to place sprites. For the code, we'll start by defining our screen dimensions (30 x 20 grid cells) and provide a title.
 
 ```python
 WIDTH = 30
 HEIGHT = 20
 TITLE = 'Scoring Demo'
 ```
-# Accumulator
+
+## Accumulator
 The first score box we'll define will go to the upper left corner of the screen.
 ```python
 score(color=WHITE)
@@ -17,16 +27,17 @@ score(color=WHITE)
 You can try running your game now and you'll notice the scoring box. Without any options, the *default* scoring box is a simple numeric score counter.
 
 ```
-my_machine$ pred score.py
+pred game.py
 ```
-# Value
+
+## Value
 The next score box is a numeric value holder. Unlike the previous example, this score box will not count the score, but rather display a value.
 
 ```python
 score(pos=UPPER_RIGHT, method=VALUE)
 ```
 
-# Timer (countdown)
+## Timer (countdown)
 Some games may have a countdown timer where the player must complete an operation within a designated amount of time. This example adds a `timer()` callback function that is executed when the value reaches the goal of `0`.
 
 ```python
@@ -40,7 +51,7 @@ def timer():
 # when the goal of 0 is reached, execute the timer callback function
 score(30, pos=LOWER_RIGHT, method=TIMER, step=-1, goal=0, callback=timer, prefix='Time Left:')
 ```
-# Timer (duration)
+## Timer (duration)
 Similar to the countdown timer, is a duration timer that displays the amount time the player has been playing the game (or level). As with the countdown timer, it is possible to define a `goal` and a callback, but we elect to simply show the time.
 
 ```python
@@ -51,7 +62,7 @@ Similar to the countdown timer, is a duration timer that displays the amount tim
 score(pos=LOWER_LEFT, method=TIMER, step=1, goal=10, prefix='Duration:')
 ```
 
-# A Silly Scoring Example
+## A Silly Scoring Example
 To showcase all of our scoring boxes in operation, let's create a simple circle clicking game. Here's the complete version that also includes the previously defined timers.
 
 ```python
@@ -101,3 +112,6 @@ callback(show, 0.5)
 keydown('r', reset)
 ```
 
+## Next Steps
+
+Want to see scoring in action? Take a look at the [Click Ninja](/examples/clickninja) and [Zombie Madness](/examples/zombie/) games.

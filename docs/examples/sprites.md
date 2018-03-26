@@ -1,26 +1,32 @@
-Working with Sprites
-===================
+# Working with Sprites
 The Predigame sprite is a generic two-dimensional object that is integrated with other sprites in a larger scene. A sprite can consist of a bitmap (still) image or a basic geometrical shape (circle, rectangle, ellipse). Sprites in Predigame have some fun properties - they can be clicked, collide with other sprites, even fade, spin or pulse.
 
 Let's have fun working with Sprites!
 
-Getting Started
-----------
-To get things started, we're going to create a basic Predigame canvas that we'll use to place sprites. The canvas will have a width of 30 grid cells and a height of 20 grid cells.
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete this tutorial. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Getting Started
+To get things started, we're going to create a new Predigame game. This can be done by typing the following the command in the terminal:
+
+```
+pred new sprites
+```
+Now in the text editor, find and open the file `sprites/game.py`. This file is used to create a basic Predigame canvas that we'll use to place sprites. The canvas will have a width of 30 grid cells, height of 20 grid cells (we'll discuss what cells mean in a second), and a title of `Simple Game`, which we're going to change to `Sprites Demo`.
 
 ```python
 WIDTH = 30
 HEIGHT = 20
 TITLE = 'Sprites Demo'
 ```
-Save your changes. Let's call the file `sprite-demo.py`.  Try running the game from the terminal using the `pred` command (you'll want to run this command from the directory where you saved the file).
+Save your changes. Try running the game from the terminal using the `pred` command (you'll want to run this command from the directory where you saved the file, e.g. `sprites` if you followed the above `pred new` example).
 
-    my_machine$ pred sprite-demo.py
+```
+pred game.py
+```
+Now this program doesn't do much just yet. Just an empty window titled `Sprites Demo`. So boring. We're going to add some more code, but first let's make sure we understand grid coordinates and how to place sprites within those coordinates.
 
-This program doesn't do much just yet. Just an empty window titled "Sprites Demo". So boring. We're going to add some more code, but first let's make sure we understand grid coordinates and how to place sprites within those coordinates.
-
-Understanding Grid Coordinates
--------------
+## Understanding Grid Coordinates
 Probably the easiest way to understand grid coordinates is to enable the `grid()` overlay in the game code.
 
 ```python
@@ -28,12 +34,13 @@ WIDTH = 30
 HEIGHT = 20
 TITLE = 'Sprites Demo'
 
-# enable the grid overlay
 grid()
 ```
 Save your code and try running the this version using the same command:
 
-    my_machine$ pred sprite-demo.py
+```
+pred game.py
+```
 
 The result should look like the figure below. Counting the grid coordinates will show **30** from *left to right* and **20** from *top to bottom*. This doesn't address how to address sprites using grid coordinates, we'll cover that next.
 
@@ -93,8 +100,7 @@ text("(" + str(WIDTH-1) + ", " + str(HEIGHT-1) + ")", PURPLE, pos = (WIDTH-3,HEI
 The resulting game window will show the following rendering:
 ![alt text](http://predicate.us/predigame/images/sprites_grid3.png "Predigame Grid Coordinates")
 
-Creating Shapes
--------------
+## Creating Shapes
 There are two types of sprites supported in the Predigame platform - shapes and images. Let's look at shapes. The formal *function definition* (or signature) for creating a shape is as follows:
 
 ```python
@@ -155,8 +161,7 @@ shape(ELLIPSE, (134, 134, 134), (23, 2), (5, 2))
 Save and run this code. The result should look similar to the image below:
 ![alt text](http://predicate.us/predigame/images/sprites_grid4.png "Predigame Grid Coordinates")
 
-Creating Images
--------------
+## Creating Images
 Like shapes, the Predigame platform also supports creating images. The formal *function definition* (or signature) for creating an image is as follows:
 
 ```python
@@ -189,8 +194,8 @@ image('zombie-2', (19,9), size = 5)
 Add the above lines to our code file and save the changes. The result should look similar to the image below:
 ![alt text](http://predicate.us/predigame/images/sprites_grid5.png "Predigame Grid Coordinates")
 
-Sprite Effects
--------------
+##Sprite Effects
+
 Drawing sprites can be a lot of fun, however, we can add some effects to bring them to life. For example, we can make sprites spin, float, and even pulse. Let's look at the some new sprites with effects attached.
 
 ### Spinning
@@ -269,4 +274,8 @@ def eatit(z, s):
 image('zombie-1', (28, 18), size = 2).keys().collides(sprites(), eatit)
 image('zombie-2', (25, 18), size = 2).keys(right='d', left='a', up='w', down='s').collides(sprites(), eatit)
 ```
-Here we **chain** the `.collides()` callback which takes in a list of sprites and registers a callback function. As coded, we register both zombies to check for collisions with all sprites, the `sprites()` call will return all sprites on the canvas, and invite the `eatit` callback function.
+Here we **chain** the `.collides()` callback which takes in a list of sprites and registers a callback function. As coded, we register both zombies to check for collisions with all sprites, the `sprites()` call will return all sprites on the canvas, and invoke the `eatit` callback function.
+
+## Next Steps
+
+Want to see sprites in action? Take a look at the [Thirsty Zombie](/examples/thirsty) game.

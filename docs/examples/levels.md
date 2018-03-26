@@ -1,5 +1,4 @@
-Levels
-===========
+# Levels
 Predigame utilizes [Python Classes](https://docs.python.org/3/tutorial/classes.html) to implement a game with levels. If you're new to the *class abstraction* be sure to click on the previous link and learn about a pretty cool way of organizing your code.  
 
 A Predigame level consists of three key ingredients:
@@ -10,7 +9,19 @@ A Predigame level consists of three key ingredients:
 
 With that in mind, let's take a look at two mini-game examples.
 
-# Example 1: Statically Defined Levels
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete these examples. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Getting Started
+To get things started, we're going to create a new Predigame game. This can be done by typing the following the command in the terminal:
+
+```
+pred new levels
+```
+Now in the text editor, find and open the file `levels/game.py`. Now let's get started!
+
+
+## Statically Defined Levels
 
 This example is pretty basic. We introduce game with two statically defined levels - level 1 draws one circle, level 2 draws two circles. Yup. Pretty basic, but it illustrates the mechanics of what it takes to create a level.
 
@@ -126,7 +137,7 @@ class PopLevel2(Level):
 # start the game at level 1
 level(PopLevel1(1))
 ```
-# Example 2: Dynamic Levels
+## Dynamic Levels
 
 This example builds on the previous but now increases the number of circles that are drawn with each level. We've also introduced a countdown timer. The objective of this game is to see how many levels the player can reach by clicking all circles within `10` seconds. You'll notice that there is much less code in this examples. Dynamic levels are fun!
 
@@ -144,7 +155,7 @@ current_level = None
 def timer():
     text("You survived " + str(current_level.get_duration()) + " seconds.")
     gameover()
- 
+
 def pop(s):
     s.destroy()
     current_level.hit()
@@ -203,4 +214,6 @@ level(PopLevel(1))
 
 ```
 
+## Next Steps
 
+Want to see levels in action? Take a look at the [Click Ninja](/examples/clickninja) and [Zombie Madness](/examples/zombie/) games.

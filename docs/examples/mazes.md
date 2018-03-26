@@ -1,26 +1,41 @@
+# Drawing Mazes
 
-Drawing Mazes
-===================
 We can code a number of games with mazes. From Pacman to avoiding the zombie apocalypse, mazes are a fun and easy way to plant obstacles or walls.  The Predigame platform supports a number of maze options that we'll explore in this README. For those familiar with the Predigame Sprite, mazes are nothing more than a collection of sprites, normally all of the same type and size.
 
 Let's explore how to code mazes!
 
-Getting Started
-----------
-To get things started, we're going to create a basic Predigame canvas that we'll use to build the maze. The canvas will have a width of 30 grid cells and a height of 20 grid cells.
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete this tutorial. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Getting Started
+To get things started, we're going download an existing Predigame game that has a few maxes we can use to experiment with animations (you'll need an Internet connection to complete the download). This can be done by typing the following the command in the terminal:
+
+```
+pred pull mazes
+```
+
+Then change into the `mazes` directory.
+
+```
+cd mazes
+```
+
+Now let's create a basic Predigame canvas that we'll use to build the maze. The canvas will have a width of 30 grid cells and a height of 20 grid cells.
 
 ```python
 WIDTH = 30
 HEIGHT = 20
 TITLE = 'MAZE'
 ```
-Save your changes. Let's call the file `maze.py`.  Try running the game from the terminal using the `pred` command (you'll want to run this command from the directory where you saved the file).
+Save your changes. Let's call the file `game.py`.  Try running the game from the terminal using the `pred` command (you'll want to run this command from the directory where you saved the file).
 
-    my_machine$ pred maze.py
+```
+pred game.py
+```
 
-This program doesn't do much just yet. Just an empty window titled "MAZE" - that's missing the maze! Let's add that now.
+This program doesn't do much just yet. Just an empty window titled "MAZE" - that is missing the maze! Let's add that now.
 
-# Random Mazes
+## Random Mazes
 The first type of maze we'll create is the computer generated randomized maze. The code below will iterate over every cell in the game and make a random decision to draw a maze.
 
 ```python
@@ -127,7 +142,7 @@ Save the changes and try running the code:
 
 Notice that player sprite can walk through walls? That's a bit silly. We'll fix that in a few minutes. Can't reach the destination? Try hitting `r` to reset the game.
 
-## Don't hit the walls!
+### Don't hit the walls!
 Now let's modify the code to end the game if the player sprite bumps into a wall. It's a small insertion we can add to the end of the file.
 
 ```python
@@ -144,7 +159,7 @@ Save the changes and try running the code:
 
     my_machine$ pred maze.py
 
-## Wall Avoidance
+### Wall Avoidance
 In a real game, we don't want the player sprite to walk into walls. It's possible to check the destination of where the player is about to move prior to making the move. We'll call this a *precondition* - Predigame handles this as a callback function.
 
 Add the following code to the type of your file, under the `TITLE` line:
@@ -235,7 +250,7 @@ d.collides(p, win)
 keydown('r', reset)
 ```
 
-# Maze Editor
+## Maze Editor
 
 Random mazes can be a little challenging to work with since we don't have any control where the obstacles are created. We'll now walk through how to create mazes.
 
@@ -256,7 +271,7 @@ It's possible to create some pretty cool mazes. Give it a try and see what you c
 
 ![alt text](http://predicate.us/predigame/images/maze_editor.png "Predigame Grid Coordinates")
 
-## Loading Saved Mazes
+### Loading Saved Mazes
 
 Once a few mazes have been created, it's possible to load them into a new game. Let's take a look at a simple example. This code assumes that two mazes "1" and "2" are available in the `mazes/` directory.
 
@@ -291,7 +306,7 @@ partial(shape, RECT, RED)
 ```
 Notice the similarities? Predigame and python will unpack the partial into the shape once it's ready to create the shape.
 
-# Maze Generator
+## Maze Generator
 
 We can also randomly generate mazes that are pretty close to a Pacman-style game with the basic function all:
 
@@ -309,7 +324,7 @@ and this maze will be constructed out of black rectangles:
 maze(callback=partial(shape, RECT, BLACK))
 ```
 
-# Maze Examples
+## Maze Examples
 
 We've included a few examples to illustrate some mini-games that can be created with Mazes:
 
@@ -319,3 +334,7 @@ We've included a few examples to illustrate some mini-games that can be created 
 - `maze-4.py` - load a maze from a file.
 - `maze-5.py` - continuation of `maze-4.py` but all whitespace is filled with coins.
 - `maze-6.py` - random maze that fills all whitespace with coins.
+
+## Next Steps
+
+Want to see actors in action? Take a look at the [Making Bacon](/examples/bacon) game.

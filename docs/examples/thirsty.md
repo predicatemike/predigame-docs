@@ -1,8 +1,9 @@
-The Thirsty Zombie
-===================
+#Thirsty Zombie
+
 Our zombie likes sprite and hates code. This game throws soda can sprites at the zombie where the zombie must consume (destroy) them. If the zombie consumes a "coke" sprite, it will explode and end the game. If the zombie misses too many "sprite" sprites, it will die from dehydration.  The zombie is rewarded one point for every "sprite" consumed.
 
 **Game Algorithm**:
+
 - create a game canvas with a width of 30 and height of 20 grid cells
 - use `callback(function, time)` throw the cans
 - pick a random probability for throwing a "coke"
@@ -14,7 +15,24 @@ Our zombie likes sprite and hates code. This game throws soda can sprites at the
 - use effects to make the game fun
 - reset the game if the `r` key is pressed
 
-# Getting Started
+## Prerequisites
+You'll need to have the Predigame platform installed, a trusty text editor handy, and the command prompt (or terminal) open to complete this tutorial. Visit [http://predigame.io](http://predigame.io) for installation instructions.
+
+## Getting Started
+To get things started, we're going download an existing Predigame game that has a few actors we can use to experiment with animations (you'll need an Internet connection to complete the download). This can be done by typing the following the command in the terminal:
+
+```
+pred pull thirsty
+```
+
+Then change into the `thirsty` directory.
+
+```
+cd thirsty
+```
+Now in the text editor, find and open the file `thirsty/game.py`.
+
+## Getting Started
 Here's the first few lines:
 ```python
 WIDTH = 30
@@ -26,7 +44,7 @@ BACKGROUND = 'stormy'
 ```
 This will build a window of 30x20 grid cells and add a "stormy" background image. *Make sure this image is saved in the `backgrounds/` directory*.
 
-# Zombie Creation
+## Zombie Creation
 
 ```python
 # create a zombie sprite. flip the sprite so the zombie faces to the right
@@ -53,7 +71,7 @@ def throw():
     # a callback to call the throw() function again
     callback(throw, rand(0.5, 2))
 ```
-# Callback Functions
+## Callback Functions
 
 Before we draw the code for a beverage, we need to define the logic that describes consumption. Remember, this is because python requires us to define our callback functions before we use them.
 
@@ -91,7 +109,7 @@ def miss(target):
         zombie.rotate(90).pulse(time=2, size=2)
         gameover()
 ```
-# Throwing Soda
+## Throwing Soda
 
 Throwing cans of soda is also a callback function, but controlled via time. A key to throwing is to mix up the positions a bit. The line of code `y_pos = rand_pos()[1]` is a shorthanded way of randomly picking a y (top/bottom) position. Read through the rest of the code below, we added some documentation to clarify each of the lines.
 
@@ -123,7 +141,7 @@ def throw_soda():
 # schedule the throw callback to run
 callback(throw_soda, 1)
 ```
-# Final Bits
+## Final Bits
 
 The final parts of the game enable score keeping and resetting the game if the 'r' key is pressed.
 
@@ -135,7 +153,7 @@ score(color=WHITE)
 keydown('r', reset)
 ```
 
-# Complete Code
+## Complete Code
 
 Below is the complete code for "thirsty zombie".  We added an easter egg if the 'b' button is pressed - launch of soccer balls; it's an added obstacle that the zombie will need to avoid.
 
@@ -267,9 +285,11 @@ score(color=WHITE)
 keydown('r', reset)
 ```
 
-Save this code as `thirsty.py` and let's give it a run!
+Save this code as `game.py` and let's give it a run!
 
-    my_machine$ pred zombie.py
+```
+pred game.py
+```
 
 If it loads correctly, the following game canvas should display. Have fun!!
 
