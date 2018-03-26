@@ -1,8 +1,14 @@
 site_name: Predigame
+site_url: http://predigame.io
+site_description: Predigame Instructional Platform
+site_author: Predicate Academy
+
 theme:
     name: mkdocs
     custom_dir: custom_theme
 google_analytics: ['UA-116346762-1', 'predigame.io']
+repo_url: https://github.com/predigame
+edit_uri: ""
 pages:
    - Home: index.md
    - About: about.md
@@ -17,5 +23,3 @@ pages:
        - Click Ninja: examples/clickninja.md
        - Thirsty Zombie: examples/thirsty.md
        - Zombie Madness: examples/zombie.md
-   - API Docs: api
-   - Support: support
