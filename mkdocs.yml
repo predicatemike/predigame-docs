@@ -1,0 +1,21 @@
+site_name: Predigame
+theme:
+    name: mkdocs
+    custom_dir: custom_theme
+google_analytics: ['UA-116346762-1', 'predigame.io']
+pages:
+   - Home: index.md
+   - About: about.md
+   - Game Examples:
+       - Drawing Sprites: examples/sprites.md
+       - Actor Framework: examples/actors.md
+       - Levels: examples/levels.md
+       - Mazes: examples/mazes.md
+       - Scoring: examples/score.md
+       - Fireworks!: examples/fireworks.md
+       - Picture Frame: examples/pictureframe.md
+       - Click Ninja: examples/clickninja.md
+       - Thirsty Zombie: examples/thirsty.md
+       - Zombie Madness: examples/zombie.md
+   - API Docs: api
+   - Support: support
