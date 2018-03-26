@@ -13,14 +13,15 @@ pages:
    - Home: index.md
    - About: about.md
    - Examples:
-       - Drawing Sprites: examples/sprites.md
-       - Actor Framework: examples/actors.md
-       - Levels: examples/levels.md
-       - Mazes: examples/mazes.md
-       - Scoring: examples/score.md
        - Fireworks!: examples/fireworks.md
        - Picture Frame: examples/pictureframe.md
        - Making Bacon: examples/bacon.md
        - Click Ninja: examples/clickninja.md
        - Thirsty Zombie: examples/thirsty.md
        - Zombie Madness: examples/zombie.md
+   - Tutorials:
+       - Drawing Sprites: examples/sprites.md
+       - Actor Framework: examples/actors.md
+       - Levels: examples/levels.md
+       - Mazes: examples/mazes.md
+       - Scoring: examples/score.md
