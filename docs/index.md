@@ -5,7 +5,7 @@
 
 ## Overview
 Predigame is an instructional platform that teaches the basics of coding through the creation of arcade games.
-The platform was researched and developed by [Predicate Academy](http://predicate.us) and used for teaching kids ages 8-17 all the *amazingly cool things* that can be created with code. Predigame is a minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface allowing aspiring coders to familarize themselves with *computational thinking* while
+The platform was researched and developed by [Predicate Academy](http://predicate.us) and used for teaching kids ages 8-17 all the *amazingly cool things* that can be created with code. Predigame is a minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface allowing aspiring coders to familiarize themselves with *computational thinking* while
 downplaying many of the nuances that come with giving instructions to a computer. Holding true to form, Predigame seeks to offer a coding experience through the lens of a technologist - specific emphasis is given towards software design, modern programming languages, command line execution, error debugging - skills that are *directly transferrable* in any journey to becoming a software engineer.
 
 Unlike other introductory platforms that teach coding concepts through visual (drag and drop) interactions, Predigame is written in Python and Pygame. While the core gaming platform covers a number of common use cases, Predigame is completely extensible and games can be amplified with custom code.
