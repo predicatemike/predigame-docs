@@ -5,8 +5,8 @@
 
 ## Overview
 Predigame is an instructional platform that teaches the basics of coding through the creation of arcade games.
-The platform was researched and developed by [Predicate Academy](http://predicate.us) and used for teaching kids ages 8-17 all the *amazingly cool things* that can be created with code. Predigame is a minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface allowing aspiring coders to familiarize themselves with *computational thinking* while
-downplaying many of the nuances that come with giving instructions to a computer. Holding true to form, Predigame seeks to offer a coding experience through the lens of a technologist - specific emphasis is given towards software design, modern programming languages, command line execution, error debugging - skills that are *directly transferrable* in any journey to becoming a software engineer.
+The platform was researched and developed by [Predicate Academy](http://predicate.us) and used for teaching kids ages 8-17 all the *amazingly cool things* that can be created with code. Predigame is a minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface that is especially welcoming to first time coders. Predigame allows aspiring coders to familiarize themselves with *computational thinking* while
+downplaying many of the language and keyboard nuances that come with using a text-based coding language. Holding true to form, Predigame seeks to offer a coding experience through the lens of a technologist - specific emphasis is given towards software design, modern programming languages, command line execution, error debugging - skills that are *directly transferrable* in any journey to becoming a software engineer.
 
 Unlike other introductory platforms that teach coding concepts through visual (drag and drop) interactions, Predigame is written in Python and Pygame. While the core gaming platform covers a number of common use cases, Predigame is completely extensible and games can be amplified with custom code.
 
@@ -36,6 +36,9 @@ Every coder needs a good text editor. For python development, we recommend using
 ### Microsoft Windows 10
 
 *NOTE: installation will require Administrator permissions*
+
+New to coding and installing stuff? Check out our [Windows Installation Video](https://youtu.be/RD5eD1VoPCI)!
+
 
 **Install Python**
 
@@ -73,6 +76,8 @@ This can take a minute or two to complete. Look for the line `Successfully insta
 
 *NOTE: installation will require Administrator permissions*
 
+New to coding and installing stuff? Check out our [macOS installation video](https://youtu.be/7xhS6yW5wjY)!
+
 **Install Python**
 
 Predigame has been tested with Python v3.6.4 ([direct download link](https://www.python.org/ftp/python/3.6.4/python-3.6.4-macosx10.6.pkg)).
@@ -106,6 +111,7 @@ Good news Pi fans! You're just a `pip3 install` away from coding your first game
 ```
 sudo pip3 install -U predigame
 ```
+New to coding and installing stuff? Check out our [Raspberry Pi Installation Video](https://youtu.be/8e-uPzgzjIA)!
 
 ## Updating Predigame
 
@@ -153,9 +159,25 @@ The `r` key can be used to reset the game. Hit `Esc` to close the window. If you
 
 Want to learn more about customizing Click Ninja? Check out the the [game tutorial](examples/clickninja.md).
 
+
+### macOS Certificate Errors
+
+Some macOS users may see this error the first time using `pred`:
+
+```
+ssl.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:749)
+```
+If that happens, run this command to install the certificates and try again:
+
+```
+sudo /Applications/Python 3.6/Install Certificates.command
+```
+
+
+
 ## Coding Your First Game
 
-Our first game is going to be a digital picture frame. It's not *TECHNICALLY* a game, but it's a fun example that showcases some of the flexibilities and power of Predigame.
+Our first game is going to be a digital picture frame. It's not *TECHNICALLY* a game, rather a fun example that showcases some of the flexibilities and power of Predigame.
 
 Open a command prompt (Windows) or terminal (macOS, Pi) and run the following command to create a new game:
 

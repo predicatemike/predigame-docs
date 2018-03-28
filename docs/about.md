@@ -47,6 +47,8 @@ Over the last three years, we have established a fairly decent understanding of 
 
 Over the past year, we’ve been working on an instructional platform that teaches the basics of coding through the creation of arcade games. The aptly named “Predigame” was originally developed by [@Gabe-Linux](https://github.com/Gabe-Linux) as a way to introduce text-based coding to our younger innovators. Their response fueled continued work on the project. Today, Predigame is minimalistic platform and makes extensive use of coding abstractions to present a "low lift" interface allowing aspiring coders to familiarize themselves with computational thinking while downplaying many of the nuances that come with giving instructions to a computer. Holding true to form, Predigame seeks to offer a coding experience through the lens of a technologist. Specific emphasis is given towards software design, modern programming languages, command line execution, error debugging - skills that are directly transferrable in any journey to becoming a software engineer.
 
+![Instagram](img/insta.jpg)
+
 We’re really excited to offer Predigame [predigame.io](http://predigame.io) to the open source community as a solution to address the needs of intermediate coders in search of a middle ground between Hour of Code/Scratch/Blockly and full-fledged coding. Predigame requires minimum computing resources and has been tested on Microsoft Windows 10, macOS 10.12+ (Sierra and High Sierra), and Raspberry Pi Model 2B/3B (Raspbian Jessie and Stretch).
 
 Give it a shot and let’s change the way our children learn about technology!
