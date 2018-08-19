@@ -223,5 +223,5 @@ Predigame API documentation can be found here: [http://predigame.io/api](http://
 ## Support
 Find a bug? Have a question?
 
-- Visit our Support Forum: [https://groups.google.com/a/predicate.us/forum/#!forum/supportloc](https://groups.google.com/a/predicate.us/forum/#!forum/support)
+- Visit our Support Forum: [https://groups.google.com/a/predicate.us/forum/#!forum/support](https://groups.google.com/a/predicate.us/forum/#!forum/support)
 - GitHub User? Fork our repos - [https://github.com/predigame](https://github.com/predigame). We happily take pull requests :)
