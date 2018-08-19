@@ -3,15 +3,14 @@ site_url: http://predigame.io
 site_description: Predigame Instructional Platform
 site_author: Predicate Academy
 
-theme:
-    name: mkdocs
-    custom_dir: custom_theme
+theme: cerulean
 google_analytics: ['UA-116346762-1', 'predigame.io']
 repo_url: https://github.com/predigame
 edit_uri: ""
-pages:
+nav:
    - Home: index.md
    - About: about.md
+   - Blog: "https://medium.com/@predicateacad"
    - Examples:
        - Fireworks!: examples/fireworks.md
        - Picture Frame: examples/pictureframe.md
@@ -25,3 +24,4 @@ pages:
        - Levels: examples/levels.md
        - Mazes: examples/mazes.md
        - Scoring: examples/score.md
+   - Support: "https://groups.google.com/a/predicate.us/forum/#!forum/supportloc"
